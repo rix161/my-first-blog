@@ -2,6 +2,15 @@
 <head>
 <title>Hello there</title>
 </head>
-<p> under construction1 </p>
+{% for post in posts %}
+
+<div>
+        <p>published: {{ post.pub_Date }}</p>
+        <h1><a href="">{{ post.title }}</a></h1>
+        <p>{{ post.text|linebreaks }}</p>
+</div>
+
+{% endfor %}
+
 </html>
 
